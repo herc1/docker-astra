@@ -6,4 +6,4 @@ COPY bin/ /usr/bin
 
 EXPOSE 8000
 
-CMD ["/usr/bin/astra"]
+ENTRYPOINT ["/usr/bin/astra"]
