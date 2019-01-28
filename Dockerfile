@@ -1,12 +1,8 @@
-FROM debian:7
+FROM centos:7
 
-RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+RUN yum update -y
 
-RUN apt-get -y update 
-
-RUN apt-get -y upgrade
-
-RUN apt-get -y install tcpdump vim less
+RUN yum install -y tcpdump vim less
 
 COPY bin/ /usr/bin
 
