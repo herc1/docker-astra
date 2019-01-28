@@ -10,4 +10,6 @@ RUN apt-get -y install tcpdump vim less
 
 COPY bin/ /usr/bin
 
+EXPOSE 8000
+
 CMD ["astra --relay"]
