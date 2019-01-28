@@ -6,7 +6,7 @@ RUN apt-get -y update
 
 RUN apt-get -y upgrade
 
-RUN apt-get -y install tcpdump vi less ip 
+RUN apt-get -y install tcpdump vim less
 
 COPY bin/ /usr/bin
 
