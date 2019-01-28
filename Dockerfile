@@ -6,4 +6,4 @@ COPY bin/ /usr/bin
 
 EXPOSE 8000
 
-CMD ["/bin/bash"]
+CMD ["/usr/bin/astra"]
