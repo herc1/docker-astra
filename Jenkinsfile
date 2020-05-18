@@ -11,8 +11,10 @@ pipeline {
         stage('push') {
             steps {
                 script {
-                    dockerImage.push()
-                    dockerImage.push('latest')
+                    docker.withRegistry('https://registry-1.docker.io/v2/', 'dockerHubCredentials') {
+                        dockerImage.push()
+                        dockerImage.push('latest')
+                    }
                 }
             }
         }
